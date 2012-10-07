@@ -1,0 +1,4 @@
+.project
+.children
+packages/
+pubspec.lock
