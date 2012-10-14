@@ -13,9 +13,9 @@ main(){
 }
 
 load(){
-  area.value = window.localStorage.$dom_getItem("value");
+  area.value = window.localStorage["value"];
 }
 
 save(){
-  window.localStorage.$dom_setItem("value", area.value);
+  window.localStorage["value"] = area.value;
 }

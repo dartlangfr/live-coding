@@ -12,9 +12,11 @@ main(){
 }
 
 load(){
+  // TODO charger depuis le localstorage
   print('Load');
 }
 
 save(){
+  // TODO enregistrer dans le localstorage
   print('Save');
 }
