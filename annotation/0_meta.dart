@@ -1,4 +1,5 @@
 main(){
+  // TODO prévenir que oldMethod est depreciée
   oldHello();
   newHello();  
 }

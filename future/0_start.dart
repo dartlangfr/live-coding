@@ -1,4 +1,4 @@
-#import("dart:isolate");
+import "dart:isolate";
 
 main() {
   // TODO 1 : ordre quelquonce (selon le temps d'execution)

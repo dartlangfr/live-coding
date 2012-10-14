@@ -1,5 +1,5 @@
-#import('dart:html');
-#import('dart:math');
+import 'dart:html';
+import 'dart:math';
 
 CanvasRenderingContext2D ctx;
 
