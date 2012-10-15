@@ -1,24 +1,25 @@
 import 'dart:isolate';
 
 main() {
-  var name = "main";
-  print("$name : start");
+  mainPrint("start");
   timer1();
   timer2();
-  print("$name : end");
+  mainPrint("end");
 }
 
 timer1() {
-  var name = "First timer";
-  new Timer.repeating(1000, (t) => tick(name));
+  new Timer.repeating(1000, (t) => tick(print1));
 }
 
 timer2() {
-  var name = "Second timer";
-  new Timer.repeating(3000, (t) => tick(name));
+  new Timer.repeating(3000, (t) => tick(print2));
 }
 
 int counter = 0;
-tick(String name) {
-  print("$name : ${counter++}");
+tick(myPrint(msg)) {
+  myPrint((counter++).toString());
 }
+
+mainPrint(d) => print("main : $d");
+print1(d) => print("First timer : $d");
+print2(d) => print("Second timer : $d");
