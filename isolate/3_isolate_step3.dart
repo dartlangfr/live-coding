@@ -1,4 +1,4 @@
-#import('dart:isolate');
+import 'dart:isolate';
 
 main() {
   var name = "main";
@@ -8,7 +8,7 @@ main() {
   ReceivePort receiver1 = new ReceivePort();
   receiver1.receive((msg, reply) => print("main : $msg"));
   sender1.send("Start !", receiver1.toSendPort());
-  
+
   // if main isolate terminates, the entire VM terminates
   spawnFunction(timer2);
   print("$name : end");

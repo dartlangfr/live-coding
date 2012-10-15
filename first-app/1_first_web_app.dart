@@ -1,4 +1,4 @@
-#import("dart:html");
+import "dart:html";
 
 main() {
   print("Hello console!");

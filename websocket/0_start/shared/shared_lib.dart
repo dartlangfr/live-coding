@@ -1,5 +1,5 @@
-#library("shared_lib");
+library shared_lib;
 
-#import("dart:json");
+import "dart:json";
 
-#source("add_operation_data.dart");
+part "add_operation_data.dart";

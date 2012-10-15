@@ -1,12 +1,12 @@
-#import('dart:io');
-#import('dart:isolate');
-#import('dart:math');
-#import('../shared/shared_lib.dart');
+import 'dart:io';
+import 'dart:isolate';
+import 'dart:math';
+import '../shared/shared_lib.dart';
 
 main() {
   print("Starting server");
   int port = 12345;
-  
+
   // Create a WebSocket handler
   WebSocketHandler wsHandler = new WebSocketHandler();
   wsHandler.onOpen = onOpen;
@@ -22,7 +22,7 @@ main() {
 // Handle a new web socket connection
 onOpen(WebSocketConnection conn) {
   print('New WebSocket connection');
-  
+
   conn.onMessage = (message) {
     print('Message received: $message');
     var opData = new AddOperationData.parse(message);

@@ -1,11 +1,11 @@
 main(){
   // TODO prévenir que oldMethod est depreciée
   oldHello();
-  newHello();  
+  newHello();
 }
 
 oldHello(){
-  print("Hello");  
+  print("Hello");
 }
 
 newHello(){

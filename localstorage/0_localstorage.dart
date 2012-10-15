@@ -7,8 +7,8 @@ main(){
   load();
   query('#save-ta').on.click.add((e) {
     save();
-  }, false);  
-  
+  }, false);
+
 }
 
 load(){

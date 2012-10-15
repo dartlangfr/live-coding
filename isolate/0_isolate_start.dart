@@ -1,4 +1,4 @@
-#import('dart:isolate');
+import 'dart:isolate';
 
 main() {
   var name = "main";

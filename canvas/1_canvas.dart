@@ -6,7 +6,7 @@ CanvasRenderingContext2D ctx;
 main() {
   CanvasElement canvas = document.query("#canvas");
   ctx = canvas.getContext("2d");
-  
+
   draw();
 }
 

@@ -17,11 +17,11 @@ Future<String> one(){
 Future<String> two(){
   var completer = new Completer();
   new Timer(1000, (t) => completer.complete("2"));
-  return completer.future; 
+  return completer.future;
 }
 
 Future<String> three(){
   var completer = new Completer();
   new Timer(500, (t) => completer.complete("3"));
-  return completer.future;  
+  return completer.future;
 }

@@ -3,12 +3,12 @@ import 'packages/meta/meta.dart';
 
 main(){
   oldHello();
-  newHello();  
+  newHello();
 }
 
 @deprecated
 oldHello(){
-  print("Hello");  
+  print("Hello");
 }
 
 newHello(){

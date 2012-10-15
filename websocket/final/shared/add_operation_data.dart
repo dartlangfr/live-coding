@@ -1,8 +1,10 @@
+part of shared_lib;
+
 class AddOperationData {
   num a;
   num b;
   num result;
-  
+
   AddOperationData(this.a, this.b);
   AddOperationData.resultsIn(this.a, this.b, this.result);
 
@@ -12,7 +14,7 @@ class AddOperationData {
     b = obj["b"];
     result = obj["result"];
   }
-  
+
   toJSONString() => JSON.stringify({"a": a, "b": b, "result": result});
 
   toString() => "$a + $b = ${result == null ? '?' : result}";

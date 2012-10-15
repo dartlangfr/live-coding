@@ -1,7 +1,7 @@
-#library("unittest_test");
+library unittest_test;
 
-#import('dart:io');
-#import('dart:isolate');
+import 'dart:io';
+import 'dart:isolate';
 
 num addNumeric(num a, num b) {
   // TODO: add implementation

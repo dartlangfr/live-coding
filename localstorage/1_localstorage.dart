@@ -8,12 +8,13 @@ main(){
   load();
   query('#save-ta').on.click.add((e) {
     save();
-  }, false);  
-  
+  }, false);
+
 }
 
 load(){
-  area.value = window.localStorage["value"];
+  String value = window.localStorage["value"];
+  area.value = value == null ? "" : value;
 }
 
 save(){
