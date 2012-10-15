@@ -10,5 +10,5 @@ main() {
 }
 
 draw() {
-  ctx.fillText("Hello world", 100, 100);
+  // TODO: Hello world!
 }

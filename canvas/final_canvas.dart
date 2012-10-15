@@ -7,13 +7,13 @@ main() {
   CanvasElement canvas = document.query("#canvas");
   ctx = canvas.getContext("2d");
 
-  // TODO: run animation
+  window.requestAnimationFrame(animate);
 }
 
 bool animate(int time){
   calculate();
   draw();
-  // TODO: run animation
+  window.requestAnimationFrame(animate);
   return true;
 }
 
@@ -34,3 +34,5 @@ calculate(){
   x = sin( time ) * 96 + 128;
   y = cos( time * 0.9 ) * 96 + 128;
 }
+
+
