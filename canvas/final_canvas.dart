@@ -34,5 +34,3 @@ calculate(){
   x = sin( time ) * 96 + 128;
   y = cos( time * 0.9 ) * 96 + 128;
 }
-
-

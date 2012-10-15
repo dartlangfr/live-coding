@@ -1,27 +1,37 @@
 import "dart:isolate";
 
-main(){
+
+Stopwatch stopWatch;
+main() {
+  stopWatch = new Stopwatch();
+  stopWatch.start();
+
   Future<String>  one = one();
-  one.then((result) => print(result));
-  two().then((result) => print(result));
-  three().then((result) => print(result));
+  one.then(myPrint);
+  two().then(myPrint);
+  three().then(myPrint);
   print("Start");
 }
 
-Future<String> one(){
+myPrint(data) {
+  print("Ellapsed: ${stopWatch.elapsedInMs()}ms");
+  print(data);
+}
+
+Future<String> one([String prefix = ""]){
   var completer = new Completer();
-  new Timer(1500, (t) => completer.complete("1"));
+  new Timer(1500, (t) => completer.complete("$prefix 1"));
   return completer.future;
 }
 
-Future<String> two(){
+Future<String> two([String prefix = ""]){
   var completer = new Completer();
-  new Timer(1000, (t) => completer.complete("2"));
+  new Timer(1000, (t) => completer.complete("$prefix 2"));
   return completer.future;
 }
 
-Future<String> three(){
+Future<String> three([String prefix = ""]){
   var completer = new Completer();
-  new Timer(500, (t) => completer.complete("3"));
+  new Timer(500, (t) => completer.complete("$prefix 3"));
   return completer.future;
 }
