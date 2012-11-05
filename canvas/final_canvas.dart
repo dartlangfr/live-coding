@@ -10,11 +10,10 @@ main() {
   window.requestAnimationFrame(animate);
 }
 
-bool animate(int time){
+animate(num time){
   calculate();
   draw();
   window.requestAnimationFrame(animate);
-  return true;
 }
 
 draw() {

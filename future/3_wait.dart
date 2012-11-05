@@ -12,7 +12,7 @@ main() {
 }
 
 myPrint(data) {
-  print("Ellapsed: ${stopWatch.elapsedInMs()}ms");
+  print("Ellapsed: ${stopWatch.elapsedMilliseconds}ms");
   print(data);
 }
 
