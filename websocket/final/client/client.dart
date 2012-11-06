@@ -14,7 +14,7 @@ main() {
 
   // Open a websocket
   webSocket = new WebSocket(url);
-  // Handle message from websocket
+  // Handle message event from websocket
   webSocket.on.message.add((MessageEvent e) {
     print('Message received: ${e.data}');
     AddOperationData result = new AddOperationData.parse(e.data);
