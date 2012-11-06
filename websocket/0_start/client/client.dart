@@ -11,7 +11,7 @@ main() {
   String url = "ws://127.0.0.1:$port";
 
   // TODO: Open a websocket
-  // TODO: Handle message from websocket
+  // TODO: Handle message event from websocket
 
   print("Client started");
 }
