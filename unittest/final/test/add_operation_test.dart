@@ -1,6 +1,7 @@
-#import("../lib/add_operation.dart");
-#import("package:unittest/unittest.dart");
-#import('dart:io');
+import "../lib/add_operation.dart";
+import "../packages/unittest/unittest.dart";
+import "../packages/unittest/mock.dart";
+import 'dart:io';
 
 // OutputStream mock class
 class MockOutputStream extends Mock implements OutputStream {}
@@ -22,7 +23,7 @@ main() {
 
     addToStream(output, "to", 2);
 
-    output.getLogs(callsTo('writeString', "to"), destructive: true).verify(happenedExactly(3));
+    output.getLogs(callsTo('writeString', "to"), null, true).verify(happenedExactly(3));
     output.getLogs().verify(neverHappened);
   });
 
