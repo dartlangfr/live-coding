@@ -5,8 +5,8 @@ main() {
   stopWatch = new Stopwatch();
   stopWatch.start();
 
-  Future<String>  one = one();
-  one.then(myPrint);
+  Future<String>  oneFuture = one();
+  oneFuture.then(myPrint);
   two().then(myPrint);
   three().then(myPrint);
   print("Start");
