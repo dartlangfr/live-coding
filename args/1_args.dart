@@ -1,7 +1,7 @@
 main(){
   var args = new Options().arguments;
   if(args.length != 2){
-    print('2 arguments requis');
+    print('2 arguments required');
     return;
   }
   var a = int.parse(args[0]);

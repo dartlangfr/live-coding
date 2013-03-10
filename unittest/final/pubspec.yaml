@@ -1,5 +1,4 @@
-name:  unittest-test
-description:  A sample unit test
-dependencies: 
-  unittest: 
-    sdk: unittest
+name: unittest_test
+description: A sample unit test
+dependencies:
+  unittest: any

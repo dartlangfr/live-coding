@@ -1,19 +1,18 @@
 import 'dart:io';
-import 'dart:isolate';
+import 'dart:async';
 import 'dart:math';
 import '../shared/shared_lib.dart';
 
 main() {
   print("Starting server");
+  String address = '127.0.0.1';
   int port = 12345;
 
-  // TODO: Create a WebSocket handler
+  HttpServer.bind(address, port).then((HttpServer server) {
+    print('Listening for connections on http://$address:$port');
 
-  HttpServer server = new HttpServer();
-  // TODO: Link the WebSocket handler with the server
-  server.listen('127.0.0.1', port);
-
-  print('Listening for connections on http://127.0.0.1:$port');
+    // TODO: Transform http requests as WebSockets and listen for new connection
+  });
 }
 
 // TODO: Handle a new web socket connection
@@ -22,7 +21,7 @@ main() {
 Future<AddOperationData> longProcess(AddOperationData opData) {
   Completer<AddOperationData> completer = new Completer<AddOperationData>();
   // Long processing, up to 10 seconds!
-  new Timer(new Random().nextInt(10000), (t) {
+  new Timer(new Duration(milliseconds: new Random().nextInt(10000)), () {
     var result = new AddOperationData.resultsIn(opData.a, opData.b, opData.a + opData.b);
     completer.complete(result);
   });

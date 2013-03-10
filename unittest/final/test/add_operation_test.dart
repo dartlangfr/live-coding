@@ -1,10 +1,11 @@
 import "../lib/add_operation.dart";
-import "../packages/unittest/unittest.dart";
-import "../packages/unittest/mock.dart";
+import "package:unittest/unittest.dart";
+import "package:unittest/mock.dart";
+import 'dart:async';
 import 'dart:io';
 
 // OutputStream mock class
-class MockOutputStream extends Mock implements OutputStream {}
+class MockOutputStream extends Mock implements StreamSink<String> {}
 
 main() {
   // test addNumeric method
@@ -19,11 +20,11 @@ main() {
   // test addToStream with writeString that throws FileIOException then always return true
   test('test addToStream', () {
     MockOutputStream output = new MockOutputStream();
-    output.when(callsTo('writeString')).thenThrow(new FileIOException()).alwaysReturn(true);
+    output.when(callsTo('add')).thenThrow(new FileIOException()).alwaysReturn(true);
 
     addToStream(output, "to", 2);
 
-    output.getLogs(callsTo('writeString', "to"), null, true).verify(happenedExactly(3));
+    output.getLogs(callsTo('add', "to"), null, true).verify(happenedExactly(3));
     output.getLogs().verify(neverHappened);
   });
 

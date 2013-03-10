@@ -1,5 +1,5 @@
 main(){
-  // TODO prévenir que oldMethod est depreciée
+  // TODO do not use oldMethod anymore, mark it as deprecated
   oldHello();
   newHello();
 }

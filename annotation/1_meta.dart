@@ -1,4 +1,4 @@
-import 'packages/meta/meta.dart';
+import 'package:meta/meta.dart';
 
 
 main(){

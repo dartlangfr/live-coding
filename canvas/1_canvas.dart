@@ -11,7 +11,7 @@ main() {
 }
 
 draw() {
-  // TODO: refacto !
+  // TODO: refactoring !
   ctx.fillStyle = '#FF0000';
   ctx.arc( 100, 100, 10, 0, PI * 2, true );
   ctx.fill();

@@ -7,7 +7,7 @@ InputElement fileInput;
 
 main(){
   fileInput = query("#fileInput");
-  textArea = query("#ta");
+  textArea = query("#content");
   // TODO charger le fichier lorsque le champ est rempli
 }
 

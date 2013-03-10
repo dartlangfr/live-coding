@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:isolate';
 
 main() {
@@ -11,11 +12,11 @@ main() {
 }
 
 timer1() {
-  new Timer.repeating(1000, (t) => tick(print1));
+  new Timer.repeating(const Duration(seconds: 1), (t) => tick(print1));
 }
 
 timer2() {
-  new Timer.repeating(3000, (t) => tick(print2));
+  new Timer.repeating(const Duration(seconds: 3), (t) => tick(print2));
 }
 
 int counter = 0;

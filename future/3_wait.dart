@@ -1,30 +1,30 @@
-import "dart:isolate";
+import "dart:async";
 
 Stopwatch stopWatch;
 main() {
   stopWatch = new Stopwatch();
   stopWatch.start();
 
-  Futures.wait([one(), two(), three()]).then(myPrint);
+  Future.wait([one(), two(), three()]).then(myPrint);
 
   print("Start");
 }
 
-Future<String> one([prefix = ""]){
+Future<String> one({prefix: ""}){
   var completer = new Completer();
-  new Timer(1500, (t) => completer.complete("$prefix 1"));
+  new Timer(new Duration(milliseconds: 1500), () => completer.complete("$prefix 1"));
   return completer.future;
 }
 
-Future<String> two([prefix = ""]){
+Future<String> two({prefix: ""}){
   var completer = new Completer();
-  new Timer(1000, (t) => completer.complete("$prefix 2"));
+  new Timer(new Duration(milliseconds: 1000), () => completer.complete("$prefix 2"));
   return completer.future;
 }
 
-Future<String> three([prefix = ""]){
+Future<String> three({prefix: ""}){
   var completer = new Completer();
-  new Timer(500, (t) => completer.complete("$prefix 3"));
+  new Timer(new Duration(milliseconds: 500), () => completer.complete("$prefix 3"));
   return completer.future;
 }
 

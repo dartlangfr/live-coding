@@ -6,13 +6,13 @@ InputElement fileInput;
 
 main(){
   fileInput = query("#fileInput");
-  textArea = query("#ta");
-  fileInput.on.change.add((e) => _loadFile());
+  textArea = query("#content");
+  fileInput.onChange.listen((e) => _loadFile());
 }
 
 _loadFile(){
   var textFile = fileInput.files[0];
-  reader.on.load.add((e) => _readFile(reader.result));
+  reader.onLoad.listen((e) => _readFile(reader.result));
   reader.readAsText(textFile);
 }
 

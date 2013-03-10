@@ -7,7 +7,7 @@ WebSocket webSocket;
 main() {
   print("Starting client");
   // Call the send(num a, num b) method when click on the submit button
-  addButton.on.click.add((e) => send(int.parse(aInput.value), int.parse(bInput.value)));
+  addButton.onClick.listen((e) => send(int.parse(aInput.value), int.parse(bInput.value)));
 
   int port = 12345;
   String url = "ws://127.0.0.1:$port";
@@ -15,7 +15,7 @@ main() {
   // Open a websocket
   webSocket = new WebSocket(url);
   // Handle message event from websocket
-  webSocket.on.message.add((MessageEvent e) {
+  webSocket.onMessage.listen((MessageEvent e) {
     print('Message received: ${e.data}');
     AddOperationData result = new AddOperationData.parse(e.data);
     addResult(result);

@@ -5,7 +5,7 @@ import '../shared/shared_lib.dart';
 main() {
   print("Starting client");
   // Call the send(num a, num b) method when click on the submit button
-  addButton.on.click.add((e) => send(int.parse(aInput.value), int.parse(bInput.value)));
+  addButton.onClick.listen((e) => send(int.parse(aInput.value), int.parse(bInput.value)));
 
   int port = 12345;
   String url = "ws://127.0.0.1:$port";
