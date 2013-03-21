@@ -15,7 +15,7 @@ main() {
 timer1() {
   port.receive((msg, reply) {
     print1(msg);
-    new Timer.repeating(const Duration(seconds: 1), (t) {
+    new Timer.periodic(const Duration(seconds: 1), (t) {
        tick(print1);
        reply.send(counter);
     });
@@ -23,7 +23,7 @@ timer1() {
 }
 
 timer2() {
-  new Timer.repeating(const Duration(seconds: 3), (t) => tick(print2));
+  new Timer.periodic(const Duration(seconds: 3), (t) => tick(print2));
 }
 
 int counter = 0;
