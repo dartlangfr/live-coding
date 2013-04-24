@@ -3,11 +3,13 @@ import "message.dart";
 
 main(){
   // Get the mirror system
-  MirrorSystem ms = currentMirrorSystem();
+  MirrorSystem mirrorSystem = currentMirrorSystem();
   // Get the message_lib library
-  LibraryMirror lm = ms.libraries['message_lib'];
+  LibraryMirror libraryMirror = mirrorSystem.libraries[const Symbol('message_lib')];
   // Get the message class
-  ClassMirror mirror = lm.classes['Message'];
-  // Create a new instance of Message and invoke the render method
-  mirror.newInstance('', ["Hello"]).then((InstanceMirror im) => im.invoke("render", []));
+  ClassMirror classMirror = libraryMirror.classes[const Symbol('Message')];
+  // Create a new instance of Message
+  InstanceMirror instanceMirror = classMirror.newInstance(const Symbol(''), ["Hello"]);
+  // Invoke the render method
+  instanceMirror.invoke(const Symbol("render"), []);
 }

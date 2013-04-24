@@ -9,5 +9,6 @@ main(){
   // TODO Get the current mirror system
   // TODO Get the message_lib library
   // TODO Get the message class
-  // TODO Create a new instance of Message and invoke the render method
+  // TODO Create a new instance of Message 
+  // TODO Invoke the render method
 }
