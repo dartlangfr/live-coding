@@ -3,9 +3,9 @@ import "message.dart";
 
 main(){
   // Get the mirror system
-  MirrorSystem mirrorSystem = currentMirrorSystem();
+  MirrorSystem systemMirror = currentMirrorSystem();
   // Get the message_lib library
-  LibraryMirror libraryMirror = mirrorSystem.libraries[const Symbol('message_lib')];
+  LibraryMirror libraryMirror = systemMirror.libraries[const Symbol('message_lib')];
   // Get the message class
   ClassMirror classMirror = libraryMirror.classes[const Symbol('Message')];
   // Create a new instance of Message

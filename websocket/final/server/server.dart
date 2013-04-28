@@ -23,7 +23,7 @@ onConnection(WebSocket conn) {
   conn.listen((message) {
     print('Message received: $message');
     var opData = new AddOperationData.parse(message);
-    longProcess(opData).then((result) => conn.send(result.toJSONString()));
+    longProcess(opData).then((result) => conn.add(result.toJSONString()));
   });
 }
 
