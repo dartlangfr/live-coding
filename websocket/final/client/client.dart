@@ -33,7 +33,7 @@ send(num a, num b) {
 
 addResult(AddOperationData result) {
   // Insert a the beginning of the list
-  resultBox.insertBefore(new LIElement()..text = "$result", resultBox.$dom_firstChild);
+  resultBox.insertBefore(new LIElement()..text = "$result", resultBox.firstChild);
 }
 
 InputElement get aInput => query("#aInput");

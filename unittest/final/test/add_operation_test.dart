@@ -20,7 +20,7 @@ main() {
   // test addToStream with writeString that throws FileIOException then always return true
   test('test addToStream', () {
     MockOutputStream output = new MockOutputStream();
-    output.when(callsTo('add')).thenThrow(new FileIOException()).alwaysReturn(true);
+    output.when(callsTo('add')).thenThrow(new FileException()).alwaysReturn(true);
 
     addToStream(output, "to", 2);
 
