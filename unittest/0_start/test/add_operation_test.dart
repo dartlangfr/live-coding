@@ -11,7 +11,7 @@ main() {
   //test('test addNumeric', () {
   //});
 
-  // TODO: test addToStream with writeString that throws FileIOException then always return true
+  // TODO: test addToStream with writeString that throws FileException then always return true
   //test('test addToStream', () {
     // TODO: instantiate mock
     // TODO: when call to writeString, first throw then return true

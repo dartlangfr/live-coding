@@ -13,7 +13,7 @@ addToStream(StreamSink<String> output, String text, int times) {
 //    try {
 //      output.add(text);
 //      times--;
-//    } on FileIOException catch (e) {
+//    } on FileException catch (e) {
 //      // Ignore and try again
 //    }
 //  }
